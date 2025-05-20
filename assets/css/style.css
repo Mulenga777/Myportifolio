@@ -1,0 +1,62 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+:root {
+  --custom-bg-color: #d3dcd6;
+}
+
+.custom-bg {
+  background-color: var(--custom-bg-color) !important;
+}
+.social-icons a:hover {
+  opacity: 0.85;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+
+#typing {
+  color: #0d6efd;
+  font-weight: bold;
+}
+
+img {
+  transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* Square profile frame with solid corner lines */
+.profile-frame {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+}
+
+.profile-frame::before,
+.profile-frame::after {
+  content: '';
+  position: absolute;
+  border: 3px solid #0d6efd;
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+}
+
+/* Top-left corner: only top and left borders visible */
+.profile-frame::before {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+/* Bottom-right corner: only bottom and right borders visible */
+.profile-frame::after {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
